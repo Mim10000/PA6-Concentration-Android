@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Welcome to the concentration game, take turns choosing a pair of cards and try to match them together, now choose your names"
+    />
+<TextView android:text="Player1" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+<EditText android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_width="match_parent" android:text="EditText"></EditText>
+<TextView android:text="Player2" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+<EditText android:layout_height="wrap_content" android:id="@+id/editText2" android:layout_width="match_parent" android:text="EditText"></EditText>
+<Button android:text="Continue" android:id="@+id/cButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="ContinueButton"></Button>
+
+</LinearLayout>
