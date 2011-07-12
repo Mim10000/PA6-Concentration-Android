@@ -3,6 +3,7 @@ package pa6Android.org;
 import java.io.FileNotFoundException;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Game extends Activity{
 	
@@ -223,6 +225,13 @@ public class Game extends Activity{
 			p1Score.setText(""+p1.getScore());
 	    	p2Score.setText(""+p2.getScore());
 
+	    	Context context = getApplicationContext();
+	    	CharSequence text = "Hello toast!";
+	    	int duration = Toast.LENGTH_SHORT;
+
+	    	Toast toast = Toast.makeText(context, ""+b1.getText() + " and " + b2.getText() + " is a match",duration);
+	    	toast.show();
+	    	
     		pickedCards = 0;
     		//Simple fix, should be changed
     		if(p1.getScore()+p2.getScore() == 3)
@@ -241,20 +250,32 @@ public class Game extends Activity{
     	}
     	else
     	{
+    	
+    		if (pTemp == p1)
+    		{
+    			pTemp = p2;
+    		}
+    		else
+    		{
+    	    	pTemp = p1;
+    		}
+    		    	
+    		
+    		Context context = getApplicationContext();
+	    	CharSequence text = "Hello toast!";
+	    	int duration = Toast.LENGTH_LONG;
+
+	    	Toast toast = Toast.makeText(context, ""+b1.getText() + " and " + b2.getText() + " is not a match, " + pTemp.getName() + "'s turn",duration);
+	    	toast.show();
+    		
+    		
     		b1.setText("");
     		b2.setText("");
     		
     		pickedCards = 0;
     	}
     	//Changes Player
-    	if (pTemp == p1)
-		{
-			pTemp = p2;
-		}
-		else
-		{
-	    	pTemp = p1;
-		}
+    
     }
 } 
 

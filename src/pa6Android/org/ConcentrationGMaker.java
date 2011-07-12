@@ -46,8 +46,6 @@ public class ConcentrationGMaker
 				while (n.equals("~"))
 				{
 					int choose = r.nextInt(2);
-					Log.d("Choosing" , ""+choose);
-					//System.out.println("QuestionsSize? " + questions.size() );
 					//Chooses from Questions randomly
 					if ((choose == 0 && questions.size() > 0) )
 					{
@@ -61,7 +59,6 @@ public class ConcentrationGMaker
 					{
 						int aChoose = r.nextInt(answers.size()); 
 						n = (answers.get(aChoose));
-						Log.d("Size issue","Answers, "+ n);
 						answers.remove(n);
 					}
 				}

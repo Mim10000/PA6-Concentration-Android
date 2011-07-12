@@ -18,9 +18,8 @@ public class Concentration
 	{
 		
 		Scanner alist;
-		Log.d("LoaderAscanner", "ugh!Ascanner");
 		LinkedList <String> questions = new LinkedList<String>();
-	
+
 		questions.add("Fire");
 		questions.add("Grass");
 		questions.add("Air");
